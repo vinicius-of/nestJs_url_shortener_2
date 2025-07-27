@@ -1,0 +1,33 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@app/auth": "<rootDir>/../libs/auth/src",
+    "@app/auth/(.*)": "<rootDir>/../libs/auth/src/$1",
+    "@app/config": "<rootDir>/../libs/config/src",
+    "@app/config/(.*)": "<rootDir>/../libs/config/src/$1",
+    "@app/contracts": "<rootDir>/../libs/contracts/src",
+    "@app/contracts/(.*)": "<rootDir>/../libs/contracts/src/$1",
+    "@app/dtos": "<rootDir>/../libs/dtos/src",
+    "@app/dtos/(.*)": "<rootDir>/../libs/dtos/src/$1",
+    "@app/services": "<rootDir>/../libs/services/src",
+    "@app/services/(.*)": "<rootDir>/../libs/services/src/$1",
+    "@app/shared": "<rootDir>/../libs/shared/src",
+    "@app/shared/(.*)": "<rootDir>/../libs/shared/src/$1",
+    "@app/urls": "<rootDir>/../libs/urls/src",
+    "@app/urls/(.*)": "<rootDir>/../libs/urls/src/$1",
+    "@app/users": "<rootDir>/../libs/users/src",
+    "@app/users/(.*)": "<rootDir>/../libs/users/src/$1",
+    "shared/services": "<rootDir>/../libs/services/src",
+    "shared/services/(.*)": "<rootDir>/../libs/services/src/$1"
+  }
+}
