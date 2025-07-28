@@ -1,10 +1,13 @@
 {
-  "name": "nest_url_shortener_2.0",
+  "name": "urlshortener2",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Vinícius de Oliveira Fonseca",
   "private": true,
   "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.17.0"
+  },
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"libs/**/*.ts\"",
@@ -21,12 +24,18 @@
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",
+    "@nestjs/jwt": "^11.0.0",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^11.0.1",
+    "@nestjs/typeorm": "^11.0.0",
+    "bcrypt": "^6.0.0",
     "class-validator": "^0.14.2",
+    "pg": "^8.16.3",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "typeorm": "^0.3.25"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
@@ -79,6 +88,7 @@
       "^@app/auth(|/.*)$": "<rootDir>/libs/auth/src/$1",
       "^@app/config(|/.*)$": "<rootDir>/libs/config/src/$1",
       "^@app/contracts(|/.*)$": "<rootDir>/libs/contracts/src/$1",
+      "^@app/database(|/.*)$": "<rootDir>/libs/database/src/$1",
       "^@app/dtos(|/.*)$": "<rootDir>/libs/dtos/src/$1",
       "^@app/services(|/.*)$": "<rootDir>/libs/services/src/$1",
       "^@app/shared(|/.*)$": "<rootDir>/libs/shared/src/$1",
