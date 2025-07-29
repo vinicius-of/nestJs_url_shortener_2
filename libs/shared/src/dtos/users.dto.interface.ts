@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsOptional, IsString, IsUUID } from 'class-validator';
+import { IsEmail, IsNotEmpty, IsString, IsUUID } from 'class-validator';
 import { User } from '../contracts/user.contract';
 
 export class CreateUserDto implements Pick<User, 'email' | 'name'> {

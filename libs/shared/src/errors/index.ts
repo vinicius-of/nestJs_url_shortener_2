@@ -1,12 +1,7 @@
 export enum AuthErrorMessages {
-    UserNotCreated = 'The new user was not created',
     WrongCredentials = 'The credentials was wrong',
-    UserNotAutheticated = 'The user is not authenticated to execute operation',
-    UserWrongData = 'The user requires field "email" to create a login',
-    UserNotValid = 'The user could not be validated',
-    UserNotFound = 'The user could not be found',
     ServiceError = 'Something wrong occurred with service call',
-    LoginAlreadyExists = 'This user already exists',
+    LoginAlreadyExists = 'This login already exists',
     LoginNotCreated = 'This login could not be created',
     LoginNotFound = 'This login could not be found',
     ServiceNotResponding = 'This service is not responding.',
