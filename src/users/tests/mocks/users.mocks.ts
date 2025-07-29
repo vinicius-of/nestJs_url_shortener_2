@@ -1,0 +1,68 @@
+import { UserEntity } from 'src/users/entities/user.entity';
+
+export const mockUsers: Partial<UserEntity>[] = [
+    {
+        id: '6887052dfc13ae2105a05447',
+        email: 'sborell0@xinhuanet.com',
+        name: 'Borell',
+        linksCount: 84,
+        createdAt: new Date('2025-05-16'),
+        updatedAt: new Date('2024-08-14'),
+    },
+    {
+        id: '6887052dfc13ae2105a05448',
+        email: 'rwinsborrow1@vkontakte.ru',
+        name: 'Rodrick',
+        linksCount: 28,
+        createdAt: new Date('2025-06-23'),
+        updatedAt: new Date('2025-07-26'),
+    },
+    {
+        id: '6887052dfc13ae2105a05449',
+        email: 'mbroseman2@cargocollective.com',
+        name: 'Kent',
+        linksCount: 18,
+        createdAt: new Date('2025-05-20'),
+        updatedAt: new Date('2024-10-09'),
+    },
+    {
+        id: '6887052dfc13ae2105a0544a',
+        email: 'mbuntin3@godaddy.com',
+        name: 'Marion',
+        linksCount: 94,
+        createdAt: new Date('2025-02-01'),
+        updatedAt: new Date('2025-07-04'),
+    },
+    {
+        id: '6887052dfc13ae2105a0544b',
+        email: 'dgravy4@home.pl',
+        name: 'Domenico',
+        linksCount: 8,
+        createdAt: new Date('2025-03-24'),
+        updatedAt: new Date('2025-03-24'),
+    },
+    {
+        id: '6887052dfc13ae2105a0544c',
+        email: 'kedlyn5@newyorker.com',
+        name: 'Kenton',
+        linksCount: 78,
+        createdAt: new Date('2025-04-27'),
+        updatedAt: new Date('2025-03-05'),
+    },
+    {
+        id: '6887052dfc13ae2105a0544d',
+        email: 'hgerbl6@xinhuanet.com',
+        name: 'Hi',
+        linksCount: 86,
+        createdAt: new Date('2024-11-03'),
+        updatedAt: new Date('2025-01-08'),
+    },
+    {
+        id: '6887052dfc13ae2105a0544e',
+        email: 'cbubbings7@jugem.jp',
+        name: 'Chrissy',
+        linksCount: 99,
+        createdAt: new Date('2024-09-06'),
+        updatedAt: new Date('2024-08-31'),
+    },
+];
