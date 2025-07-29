@@ -40,6 +40,7 @@
     "typeorm": "^0.3.25"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.18.0",
     "@nestjs/cli": "^11.0.0",
@@ -87,16 +88,10 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
-      "^@app/auth(|/.*)$": "<rootDir>/libs/auth/src/$1",
       "^@app/config(|/.*)$": "<rootDir>/libs/config/src/$1",
-      "^@app/contracts(|/.*)$": "<rootDir>/libs/contracts/src/$1",
       "^@app/database(|/.*)$": "<rootDir>/libs/database/src/$1",
-      "^@app/dtos(|/.*)$": "<rootDir>/libs/dtos/src/$1",
-      "^@app/services(|/.*)$": "<rootDir>/libs/services/src/$1",
       "^@app/shared(|/.*)$": "<rootDir>/libs/shared/src/$1",
-      "^@app/urls(|/.*)$": "<rootDir>/libs/urls/src/$1",
-      "^@app/users(|/.*)$": "<rootDir>/libs/users/src/$1",
-      "^shared/services(|/.*)$": "<rootDir>/libs/services/src/$1"
+      "^src/(.*)$": "<rootDir>/src/$1"
     }
   }
 }

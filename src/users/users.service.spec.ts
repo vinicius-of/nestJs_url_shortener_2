@@ -9,7 +9,7 @@ import {
     validUserAfterCreation,
     validUserToCreate,
 } from './tests/mocks/services/createUser.mocks';
-import { User, UserErrorMessages } from '@app/shared';
+import { UserErrorMessages } from '@app/shared';
 import { CreateUserDto } from '@app/shared/dtos';
 import {
     expectedNotFoundException,

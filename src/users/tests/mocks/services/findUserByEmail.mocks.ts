@@ -12,7 +12,7 @@ export const NotFoundUserByEmail: FindUserByEmailDto = {
 
 export const expectedNotFoundException = UserErrorMessages.UserNotFound;
 
-export const expectedValidInputFindUserByEmail: UserEntity = {
+export const expectedValidInputFindUserByEmail: Partial<UserEntity> = {
     id: '6887052dfc13ae2105a05447',
     email: 'sborell0@xinhuanet.com',
     name: 'Borell',
