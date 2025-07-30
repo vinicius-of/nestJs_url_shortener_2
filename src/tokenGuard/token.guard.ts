@@ -16,7 +16,7 @@ type RequestWithUser = Request & {
 };
 
 @Injectable()
-export class AuthGuard implements CanActivate {
+export class HasToken implements CanActivate {
     constructor(
         private readonly jwtService: JwtService,
         @Inject(jwtAuthConfig.KEY) private readonly jwtConfigs: ConfigType<typeof jwtAuthConfig>,
@@ -27,7 +27,7 @@ export class AuthGuard implements CanActivate {
         const token = this.extractTokenFromHeader(request);
 
         if (!token) {
-            throw new UnauthorizedException();
+            return true;
         }
 
         try {
