@@ -1,13 +1,13 @@
 services:
-    app:
-        build:
-            context: .
-            dockerfile: Dockerfile
-        env_file: '.env.docker'
-        ports:
-            - '${APP_PORT}:${APP_PORT}'
-        depends_on:
-            - db
+    # app:
+    #     build:
+    #         context: .
+    #         dockerfile: Dockerfile
+    #     env_file: '.env.docker'
+    #     ports:
+    #         - '${APP_PORT}:${APP_PORT}'
+    #     depends_on:
+    #         - db
 
     db:
         build:

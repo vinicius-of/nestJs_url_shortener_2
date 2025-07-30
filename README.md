@@ -6,7 +6,7 @@ Este projeto é uma aplicação de encurtamento de URLs construída utilizando o
 - **Users**: Gerenciamento de usuários
 - **URL Shortener**: Criação e redirecionamento de URLs encurtadas
 
-A aplicação pode ser executada localmente com Node.js e Yarn, ou em ambiente isolado com Docker e Docker Compose.
+A aplicação pode ser executada localmente com Node.js e Yarn, ou em ambiente isolado com Docker e Docker Compose. Além de trazer uma documentação completa sobre os endpoints e seus dados necessários para funcionamento perfeito.
 
 ---
 
