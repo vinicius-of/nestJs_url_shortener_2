@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { AuthService } from './auth.service';
 import { AuthEntity } from './entities/auth.entity';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { DeepPartial, FindOptionsWhere } from 'typeorm';
+import { DeepPartial, FindOneOptions, FindOptions, FindOptionsWhere } from 'typeorm';
 import { mockLogins } from './tests/mocks/auth.mocks';
 import {
     invalidCreateLoginBadRequest,
@@ -27,6 +27,9 @@ describe('AuthService', () => {
     let logins: Partial<AuthEntity>[];
 
     const mockRepository = {
+        findOne: jest.fn().mockImplementation((query: { where: { email: string } }) => {
+            return logins.find(login => login.email === query.where.email);
+        }),
         findOneBy: jest.fn().mockImplementation((query: FindOptionsWhere<AuthEntity>) => {
             return logins.find(login => login.email === query.email);
         }),

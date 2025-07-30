@@ -17,6 +17,7 @@ import { ConfigType } from '@nestjs/config';
 import { bcryptConfig } from '@app/config/configurations/bcrypt';
 import { UsersService } from 'src/users/users.service';
 import { JwtService } from '@nestjs/jwt';
+import { JwtPayload } from '@app/shared/contracts/jwtPayload.contract';
 
 @Injectable()
 export class AuthService implements IAuthService {
@@ -54,8 +55,11 @@ export class AuthService implements IAuthService {
     }
 
     async autheticate(data: AuthenticateDto): Promise<AuthResult> {
-        const loginFound = await this.authRepository.findOneBy({
-            email: data.email,
+        const loginFound = await this.authRepository.findOne({
+            where: {
+                email: data.email,
+            },
+            relations: ['user'],
         });
 
         if (!loginFound) {
@@ -71,7 +75,8 @@ export class AuthService implements IAuthService {
         const tokenPayload = {
             sub: loginFound.id,
             email: loginFound.email,
-        };
+            userId: loginFound.user.id,
+        } as JwtPayload;
 
         const accessToken = await this.jwtService.signAsync(tokenPayload);
 
