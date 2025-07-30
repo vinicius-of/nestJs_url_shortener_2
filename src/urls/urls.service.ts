@@ -77,30 +77,6 @@ export class UrlsService implements IUrlsService {
         return url;
     }
 
-    async listAllLinksWithCounts(userId: string): Promise<Pick<Url, 'clicks' | 'fullUrl'>[]> {
-        const result = await this.urlRepository.find({
-            withDeleted: false,
-            where: {
-                user: {
-                    id: userId,
-                },
-            },
-            select: {
-                clicks: true,
-                fullUrl: true,
-            },
-        });
-
-        const allLinksWithCounts = result.map<Pick<Url, 'clicks' | 'fullUrl'>>(url => {
-            return {
-                clicks: url.clicks,
-                fullUrl: url.fullUrl,
-            };
-        });
-
-        return allLinksWithCounts;
-    }
-
     async listAllUrls(userId: string): Promise<Url[]> {
         const list = await this.urlRepository.find({
             where: {
@@ -109,8 +85,6 @@ export class UrlsService implements IUrlsService {
                 },
             },
         });
-
-        console.log([list, userId]);
 
         return list;
     }
