@@ -1,17 +1,11 @@
 import { Url } from '../contracts';
-import {
-    RedirectViaShortUrlDto,
-    CreateUrlDto,
-    ListAllUrlDto,
-    EditUrlDto,
-    RemoveUrlDto,
-} from '../dtos';
+import { RedirectViaShortUrlDto, CreateUrlDto, EditUrlDto, RemoveUrlDto } from '../dtos';
 
-export interface UrlShortenerService {
+export interface IUrlsService {
     accessShortLink(data: RedirectViaShortUrlDto): Promise<Url>;
-    create(data: CreateUrlDto): Promise<Url>;
-    listAllUrls(data: ListAllUrlDto): Promise<Url[]>;
-    listAllLinksFromUser(data: ListAllUrlDto): Promise<Url[]>;
-    update(data: EditUrlDto): Promise<boolean>;
-    remove(data: RemoveUrlDto): Promise<boolean>;
+    create(data: CreateUrlDto, userId?: string): Promise<Url>;
+    listAllUrls(userId: string): Promise<Url[]>;
+    listAllLinksWithCounts(userId: string): Promise<Pick<Url, 'clicks' | 'fullUrl'>[]>;
+    update(data: EditUrlDto, userId: string): Promise<boolean>;
+    remove(data: RemoveUrlDto, userId: string): Promise<boolean>;
 }

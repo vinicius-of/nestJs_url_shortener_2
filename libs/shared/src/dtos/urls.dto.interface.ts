@@ -15,11 +15,6 @@ export class CreateUrlDto implements Pick<Url, 'fullUrl'> {
     fullUrl: string;
 }
 
-export class ListAllUrlDto {
-    @IsUUID()
-    userId: string;
-}
-
 export class ListAllUrlsClicksDto {
     @IsUUID()
     userId: string;
