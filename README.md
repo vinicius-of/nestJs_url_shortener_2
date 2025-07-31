@@ -22,8 +22,8 @@ Você pode instalar o Git seguindo as instruções oficiais:
 Clone o repositório com:
 
 ```bash
-git clone https://github.com/vinicius-of/nestjs_url_shortener_2
-cd nestjs_url_shortener_2
+git clone https://github.com/vinicius-of/nestJs_url_shortener_2
+cd nestJs_url_shortener_2
 ```
 
 ## 1. Executando localmente com Node.js, Yarn e NestJS
